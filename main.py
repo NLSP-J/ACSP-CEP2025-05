@@ -1,10 +1,9 @@
 import random
-import word as w
 import asyncio
 
+random.seed(time.time())
 word_list = ['eddgar','donald','yellow','bigger','nugget', 'mingos', 'papaya', 'thadus', 'bingus', 'alpaca', 'boongi', 'alferi', 'gerund', 'refund', 'beckon', 'reckon', 'hyenas', 'gravty', 'wordle', 'qwerty', 'fivegh','alferi','banana','rhythm']
-ans = random.choice(word_list)
-ans = 'yellow'
+ans = word_list[random.randint(0,len(word_list))]
 
 import pygame as pg
 import time
