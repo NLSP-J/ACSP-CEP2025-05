@@ -1,5 +1,6 @@
 import random
 import word as w
+import asyncio
 
 word_list = ['eddgar','donald','yellow','bigger','nugget', 'mingos', 'papaya', 'thadus', 'bingus', 'alpaca', 'boongi', 'alferi', 'gerund', 'refund', 'beckon', 'reckon', 'hyenas', 'gravty', 'wordle', 'qwerty', 'fivegh','alferi','banana','rhythm']
 ans = random.choice(word_list)
@@ -77,7 +78,7 @@ def draw_win():
         time.sleep(2)
         running = False
 
-def main():
+async def main():
     global running, letters, count
     while running:
         for event in pg.event.get():
@@ -102,5 +103,6 @@ def main():
         draw_win()
 
         pg.display.update()
+        await asyncio.sleep(0)
 
-main()
+asyncio.run(main())
